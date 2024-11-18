@@ -4,3 +4,12 @@ server:
 
 file-watcher:
   pathMonitoring: c:\\tmp\\
+spring:
+  rabbitmq:
+    port: 5673
+    username: userok
+    password: P@ssw0rd
+
+
+
+
