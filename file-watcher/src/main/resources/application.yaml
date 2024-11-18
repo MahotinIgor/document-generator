@@ -2,3 +2,5 @@ server:
   port: 8081
 
 
+file-watcher:
+  pathMonitoring: c:\\tmp\\
