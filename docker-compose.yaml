@@ -1,0 +1,21 @@
+version: '3.9'
+
+volumes:
+  rabbitmq-data:
+    driver: local
+
+services:
+  rabbitmq:
+    container_name: rabbit-mq
+    hostname: rabbitmq
+    image: rabbitmq:3.11.0-management
+    ports:
+      - ${RABBIT_AMQP_PORT_MAPPING}
+      - ${RABBIT_GUI_PORT_MAPPING}
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBIT_USERNAME}
+      RABBITMQ_DEFAULT_PASS: ${RABBIT_PASSWORD}
+    volumes:
+      - rabbitmq-data:/var/lib/rabbitmq
+
+
